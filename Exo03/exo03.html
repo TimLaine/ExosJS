@@ -7,36 +7,33 @@
     <title>Exo 03</title>
 </head>
 <body>
-    <div id="grille"></div>
-
+    <div id="grid"></div>
+    <div id="text"></div>
     <script>
-        const grille = document.querySelector("#grille")
-        const tic = document.createElement("div")
-        tic.classList.add("tic")
+        const grid = document.querySelector("#grid")
+        const text = document.querySelector("#text")
+        const box = document.createElement("div")
+        box.classList.add("box")
+        let nb = 1
 
         for(i=1; i <= 9; i++){
-            let newTic = tic.cloneNode()
-            grille.appendChild(newTic)
-            newTic.addEventListener("click",function(){
-                tac(newTic)
+            let newBox = box.cloneNode()
+            grid.appendChild(newBox)
+            newBox.addEventListener("click",function(){
+                boxX(newBox)
             })
         }
 
-        function tac(tic){
-            tic.classList.add("tac")
-            tic.classList.remove("toe")
-            tic.addEventListener("click",function(){
-            toe(tic)
-            tic.innerText = "X"
+        function boxX(box){
+            box.classList.add("boxX")
+            box.innerText = "X"
+            newBox.addEventListener("click",function(){
+                boxO()
             })
         }
-        function toe(tic){
-            tic.classList.remove("tac")
-            tic.classList.add("toe")
-            tic.addEventListener("click",function(){
-            tac(tic)
-            })
-            tic.innerText = "O"
+        function boxO(box){
+            box.classList.add("boxO")
+            box.innerText = "O"
         }
     </script>
 </body>

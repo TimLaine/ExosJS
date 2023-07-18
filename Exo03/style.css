@@ -1,9 +1,14 @@
-#grille{
+*{
+    margin: 0;
+    padding: 0;
+}
+#grid{
     display: flex;
     flex-wrap: wrap;
-    max-width: 700px;
+    max-width: 627px;
+    margin: 30px auto;
 }
-.tic{
+.box{
     width: 200px;
     height: 200px;
     border: 2px solid black;
@@ -12,12 +17,18 @@
     text-align: center;
     line-height: 200px;
     font-size: 3em;
-    margin: 10px;
+    margin: 2.5px;
     transition: 0.5s;
 }
-.tac{
+.boxX{
     color: red;
 }
-.toe{
+.boxO{
     color: green;
+}
+#text{
+    text-align: center;
+    font-size: 3em;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }
