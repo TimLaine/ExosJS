@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exo 03</title>
+</head>
+<body>
+    <div id="grille"></div>
+
+    <script>
+        const grille = document.querySelector("#grille")
+        const tic = document.createElement("div")
+        tic.classList.add("tic")
+
+        for(i=1; i <= 9; i++){
+            let newTic = tic.cloneNode()
+            grille.appendChild(newTic)
+            newTic.addEventListener("click",function(){
+                tac(newTic)
+            })
+        }
+
+        function tac(tic){
+            tic.classList.add("tac")
+            tic.classList.remove("toe")
+            tic.addEventListener("click",function(){
+            toe(tic)
+            tic.innerText = "X"
+            })
+        }
+        function toe(tic){
+            tic.classList.remove("tac")
+            tic.classList.add("toe")
+            tic.addEventListener("click",function(){
+            tac(tic)
+            })
+            tic.innerText = "O"
+        }
+    </script>
+</body>
+</html>

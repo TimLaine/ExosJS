@@ -1,0 +1,23 @@
+#grille{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+.tic{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 200px;
+    font-size: 3em;
+    margin: 10px;
+    transition: 0.5s;
+}
+.tac{
+    color: red;
+}
+.toe{
+    color: green;
+}
