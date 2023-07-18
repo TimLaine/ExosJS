@@ -1,0 +1,10 @@
+.carre{
+    width: 200px;
+    height: 200px;
+    color: white;
+    background-color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 200px;
+    font-size: 3em;
+}

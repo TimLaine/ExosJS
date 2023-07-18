@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exo 01</title>
+</head>
+<body>
+    <div class="carre">
+        <p>Lorem</p>
+    </div>
+    <script>
+        let carre = document.querySelector(".carre")
+        const style = getComputedStyle(carre)
+
+        carre.addEventListener("click",info)
+        
+        function info(){
+            alert("Class: "+carre.className+"\n - Background color: "+style.backgroundColor+"\n - Color: "+style.color+"\n - Height: "+carre.clientHeight+"\n - Width: "+carre.clientWidth+"\n - Police : "+style.fontFamily+" "+style.fontSize)
+        }
+    </script>
+</body>
+</html>
