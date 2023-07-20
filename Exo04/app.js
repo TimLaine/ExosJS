@@ -20,11 +20,16 @@ document.addEventListener("keydown",function(){
         zone.removeChild(zone.lastChild)
         nb--
     }
+    // Using an array AllBoxes, each carre get the EventListener to change its color to black. I need to remember to that querySelectorAll is an Array and can be used as such.
     if(nb >= 225){
-        newCarre.addEventListener("click",function(){
-            newCarre.style.backgroundColor = "#000000"
-        })
-}
+        const allBoxes = document.querySelectorAll(".carre")
+        allBoxes.forEach((element) => {
+            element.addEventListener("click",function(){
+                element.style.backgroundColor = "#000000"
+            })
+        }) 
+        console.log("STOP")
+    }
 })
 // This function works by using an array containing all hexadecimal values, then taking one out of random 6 times in a row and creating a value with that. It's a second solution, based on something found on internet. The RGB one is my own.
 function couleur(){
