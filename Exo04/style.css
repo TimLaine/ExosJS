@@ -6,9 +6,13 @@
 #zone{
     display: flex;
     flex-wrap: wrap;
+    max-width: 900px;
+    max-height: 900px;
+    overflow: hidden;
 }
 .carre{
     width: 60px;
     height: 60px;
-    background-color: red;
+    border: 1px solid black;
+    cursor: pointer;
 }
