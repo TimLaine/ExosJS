@@ -18,6 +18,10 @@
     line-height: 200px;
     font-size: 3em;
     margin: 2.5px;
+    transition: 0.5s;
+}
+.box-clicked{
+    scale: 0.9;
 }
 .boxX{
     color: red;
